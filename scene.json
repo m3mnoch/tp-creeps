@@ -1,0 +1,35 @@
+{
+  "display": {
+    "title": "tp-creeps"
+  },
+  "owner": "",
+  "contact": {
+    "name": "m3mnoch",
+    "email": "m3mnoch@decentraland.org"
+  },
+  "scene": {
+    "parcels": [
+      "0,0",
+      "1,0",
+      "2,0",
+      "0,1",
+      "1,1",
+      "2,1",
+      "0,2",
+      "1,2",
+      "2,2"
+    ],
+    "base": "0,0"
+  },
+  "communications": {
+    "type": "webrtc",
+    "signalling": "https://rendezvous.decentraland.org"
+  },
+  "policy": {
+    "fly": true,
+    "voiceEnabled": true,
+    "blacklist": [],
+    "teleportPosition": "0,0,0"
+  },
+  "main": "scene.js"
+}
