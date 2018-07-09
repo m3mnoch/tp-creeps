@@ -1,4 +1,4 @@
-import Game from "./Game";
+import Game from "modules/org.decentraland.gamekit/Game";
 
 export namespace GameConfig {
     // where we're holding the main game instance.

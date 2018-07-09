@@ -1,10 +1,16 @@
 import { createElement } from "metaverse-api";
 
-const Ground = (props: JSX.BaseEntity) => {
+const StaticEntities = (props: JSX.BaseEntity) => {
     return (
         <scene>
             <material id="shadow" albedoTexture={"assets/images/shadow.png"} alpha={1} />
             <material id="grass" albedoTexture={"assets/images/grass.jpg"} />
+            <material id="path-ns" albedoTexture={"assets/images/DL_path_V.png"} />
+            <material id="path-ew" albedoTexture={"assets/images/DL_path_H.png"} />
+            <material id="path-ne" albedoTexture={"assets/images/DL_path_SW.png"} />
+            <material id="path-nw" albedoTexture={"assets/images/DL_path_SE.png"} />
+            <material id="path-se" albedoTexture={"assets/images/DL_path_NW.png"} />
+            <material id="path-sw" albedoTexture={"assets/images/DL_path_NE.png"} />
             <plane
                 position={{ x: 2.501, y: 0, z: 2.501 }}
                 scale={{ x: 5, y: 5, z: 1 }}
@@ -266,4 +272,4 @@ const Ground = (props: JSX.BaseEntity) => {
     );
 };
 
-export default Ground;
+export default StaticEntities;

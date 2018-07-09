@@ -52,7 +52,7 @@ export default class Creep extends Gob {
 
         setTimeout(function() {
             self.anim.transitionToClip("run-human", 300);
-            self.anim.moveTo({ x: 1, y: 0, z: 1 }, self.creepSpeed, new Signal(states.IDLE, signals.ARRIVED));
+            self.anim.moveTo({ x: 10.5, y: 0, z: 29 }, self.creepSpeed, new Signal(states.IDLE, signals.ARRIVED));
         }, 3000);
         this.anim.transitionToClip("idle-human", 300);
 
@@ -100,7 +100,7 @@ export default class Creep extends Gob {
                     rotation={{ x: 0, y: -90, z: 0 }}
                 />
                 <plane
-                    position={{ x: 0, y: 0.001, z: 0 }}
+                    position={{ x: 0, y: 0.002, z: 0 }}
                     rotation={{ x: 90, y: 0, z: 0 }}
                     scale={{ x: 1, y: 1, z: 1 }}
                     material="#shadow"

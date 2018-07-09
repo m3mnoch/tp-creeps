@@ -1,12 +1,22 @@
 import Player from "modules/org.decentraland.gamekit/Player";
-import Creep from "src/gobs/Creep";
+import TilePath from "src/gobs/TilePath";
+import TileSpawner from "src/gobs/TileSpawner";
 import { GameConfig } from "./GameConfig";
+import Creep from "./gobs/Creep";
 
 export const gameMount = () => {
     // start up the player tracking so we can synchronously get the player position.
     // i really, really dislike this.  multiplayer, man.  multiplayer.
     const player: Player = new Player("m3mnoch");
     GameConfig.theGame.addPlayerToScene(player);
+
+    // adding our gate to the scene.
+    const gate = new TileSpawner("gate", 10.5, 29.799, "south");
+    GameConfig.theGame.addGobToScene(gate);
+    gate.spawnTiles();
+
+    let tile = new TilePath("path-001", 10.5, 29.499, true, true, false, false);
+    GameConfig.theGame.addGobToScene(tile);
 
     // adding our drone to the scene.
     const drone = new Creep("creep-001");

@@ -7,7 +7,7 @@
 
 // a list of channels to pay attention to.
 // for example, "any" could log anything while "animation" would only do that channel.
-const logChannels: string[] = ["dronestate"];
+const logChannels: string[] = ["tiles"];
 //const logChannels:string[] = ["debug"];
 
 export const log = (channel: string, logline: string, ...args: any[]) => {
