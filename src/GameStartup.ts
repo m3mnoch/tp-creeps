@@ -1,5 +1,4 @@
 import Player from "modules/org.decentraland.gamekit/Player";
-import TilePath from "src/gobs/TilePath";
 import TileSpawner from "src/gobs/TileSpawner";
 import { GameConfig } from "./GameConfig";
 import Creep from "./gobs/Creep";
@@ -11,14 +10,14 @@ export const gameMount = () => {
     GameConfig.theGame.addPlayerToScene(player);
 
     // adding our gate to the scene.
-    const gate = new TileSpawner("gate", 10.5, 29.799, "south");
+    const gate = new TileSpawner();
     GameConfig.theGame.addGobToScene(gate);
     gate.spawnTiles();
 
-    let tile = new TilePath("path-001", 10.5, 29.499, true, true, false, false);
-    GameConfig.theGame.addGobToScene(tile);
+    // let tile = new TilePath("path-001", 10.5, 29.499, true, true, false, false);
+    // GameConfig.theGame.addGobToScene(tile);
 
-    // adding our drone to the scene.
+    // adding our creep to the scene.
     const drone = new Creep("creep-001");
     GameConfig.theGame.addGobToScene(drone);
 

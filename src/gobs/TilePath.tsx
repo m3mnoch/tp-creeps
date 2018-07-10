@@ -2,11 +2,18 @@ import { createElement, ISimplifiedNode } from "metaverse-api";
 import { log } from "modules/org.decentraland.gamekit/GameLogger";
 import Gob from "modules/org.decentraland.gamekit/Gob";
 
+const xOffset: number = 0.5;
+const zOffset: number = 0.5;
+
 export default class TilePath extends Gob {
     private mat: string;
 
-    constructor(name: string, tX: number, tY: number, north: boolean, south: boolean, east: boolean, west: boolean) {
-        super(name, "TilePath", tX, 0, tY);
+    constructor(name: string, tX: number, tZ: number, north: boolean, south: boolean, east: boolean, west: boolean) {
+        // we need to handle the fact that 0 is out of bounds and needs to be 0.001.
+        if (tX == 0) tX = 0.001;
+        if (tZ == 29) tZ = 28.999; // WARNING!!  HARD CODED!
+
+        super(name, "TilePath", tX + xOffset, 0.001, tZ + zOffset);
 
         this.mat = "#path-ns";
 
